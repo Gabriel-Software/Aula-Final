@@ -27,3 +27,5 @@ export const Item : NextPage<ItemProps> = ({ task }) => {
         </div>
     );
 }
+
+# types
