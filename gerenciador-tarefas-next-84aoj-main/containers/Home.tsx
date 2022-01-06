@@ -80,13 +80,13 @@ export const Home : NextPage<HomeProps> = ({setToken}) => {
             await executeRequest('task', 'POST', body);
             await getFilteredList();
             closeModal();
-        }catch(e){
-            if(e?.response?.data?.error){
-                console.log(e?.response);
-                setErrorMsg(e?.response?.data?.error);
+        }catch(ex : any){
+            if(ex?.response?.data?.error){
+                console.log(ex?.response);
+                setErrorMsg(ex?.response?.data?.error);
                 return;
             }
-            console.log(e);
+            console.log(ex);
             setErrorMsg('Ocorreu erro ao cadastrar tarefa, tente novamenete');
         }
     }
